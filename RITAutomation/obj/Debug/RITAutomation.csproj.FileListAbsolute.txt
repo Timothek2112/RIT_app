@@ -1,0 +1,86 @@
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\RITAutomation.exe.config
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\RITAutomation.exe
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\RITAutomation.pdb
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\AjaxMin.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\EntityFramework.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\GMap.NET.Core.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\Newtonsoft.Json.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Data.SqlClient.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\EntityFramework.xml
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\Newtonsoft.Json.xml
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Data.SqlClient.xml
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.xml
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.AssemblyReference.cache
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.Form1.resources
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.Properties.Resources.resources
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.GenerateResource.cache
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.CoreCompileInputs.cache
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.CopyComplete
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.exe
+C:\Users\molot\Desktop\Rit-It\RITAutomation\RITAutomation\obj\Debug\RITAutomation.pdb
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\RITAutomation.exe.config
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\RITAutomation.exe
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\RITAutomation.pdb
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\AjaxMin.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\EntityFramework.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\GMap.NET.Core.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\Newtonsoft.Json.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Data.SqlClient.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\EntityFramework.xml
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\Newtonsoft.Json.xml
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Data.SqlClient.xml
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.xml
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.AssemblyReference.cache
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.SuggestedBindingRedirects.cache
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.Properties.Resources.resources
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.GenerateResource.cache
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.CoreCompileInputs.cache
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.CopyComplete
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.exe
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.pdb
+C:\Users\snezha\Desktop\RITAutomation\RITAutomation\obj\Debug\RITAutomation.MainWindow.resources
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\RITAutomation.exe.config
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\RITAutomation.exe
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\RITAutomation.pdb
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\AjaxMin.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\EntityFramework.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\EntityFramework.SqlServer.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\GMap.NET.Core.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\GMap.NET.WindowsForms.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\Newtonsoft.Json.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Data.SqlClient.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Security.Principal.Windows.dll
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\EntityFramework.xml
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\EntityFramework.SqlServer.xml
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\Newtonsoft.Json.xml
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Data.SqlClient.xml
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Data.SQLite.xml
+D:\Тестовое задание\RITAutomation\RITAutomation\bin\Debug\System.Security.Principal.Windows.xml
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.AssemblyReference.cache
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.SuggestedBindingRedirects.cache
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.MainWindow.resources
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.Properties.Resources.resources
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.GenerateResource.cache
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.CoreCompileInputs.cache
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.CopyComplete
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.exe
+D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.pdb
