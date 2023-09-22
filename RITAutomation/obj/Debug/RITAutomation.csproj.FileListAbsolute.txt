@@ -84,3 +84,32 @@ D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAuto
 D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.csproj.CopyComplete
 D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.exe
 D:\Тестовое задание\RITAutomation\RITAutomation\obj\Debug\RITAutomation.pdb
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\RITAutomation.exe.config
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\RITAutomation.exe
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\RITAutomation.pdb
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\AjaxMin.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\EntityFramework.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\EntityFramework.SqlServer.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\GMap.NET.Core.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\GMap.NET.WindowsForms.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\Newtonsoft.Json.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Data.SqlClient.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Data.SQLite.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Security.Principal.Windows.dll
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\EntityFramework.xml
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\EntityFramework.SqlServer.xml
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\Newtonsoft.Json.xml
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Data.SqlClient.xml
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Data.SQLite.xml
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\bin\Debug\System.Security.Principal.Windows.xml
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.csproj.AssemblyReference.cache
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.csproj.SuggestedBindingRedirects.cache
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.MainWindow.resources
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.Properties.Resources.resources
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.csproj.GenerateResource.cache
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.csproj.CoreCompileInputs.cache
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.csproj.CopyComplete
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.exe
+D:\Учеба\RIT тестовое\RIT_app Задание 4\RITAutomation\obj\Debug\RITAutomation.pdb

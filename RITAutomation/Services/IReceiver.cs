@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RITAutomation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,11 @@ namespace RITAutomation.Services
 {
     public interface IReceiver
     {
+        bool isReceiving { get; }
+        GPGGA lastData { get; set; }
         void StartReceiving();
         void StopReceiving();
-        string GetLastData();
-        Task<string> ReceiveAsync();
+        GPGGA GetLastData();
+        void ReceiveAsync();
     }
 }

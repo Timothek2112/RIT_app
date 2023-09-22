@@ -95,12 +95,16 @@
     <Compile Include="Models\TransportUnit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ComGpsReceiver.cs" />
+    <Compile Include="Services\FileGpsReceiver.cs" />
     <Compile Include="Services\UdpGPSReceiver.cs" />
     <Compile Include="Services\IReceiver.cs" />
     <Compile Include="Services\MarkersService.cs" />
     <Compile Include="Services\TransportCoordinatesService.cs" />
     <Compile Include="Utils\NMEAParser.cs" />
     <Compile Include="Utils\NoRowsException.cs" />
+    <Compile Include="Utils\SourceTypeEnum.cs" />
+    <Compile Include="Utils\WrongGpggaDataException.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>

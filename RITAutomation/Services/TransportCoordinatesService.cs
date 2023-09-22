@@ -13,7 +13,7 @@ namespace RITAutomation.Services
 {
     public class TransportCoordinatesService
     {
-        private const string connectionString = @"Data Source=MSI;Initial Catalog=RIT_Automation;Integrated Security=True";
+        private const string connectionString = @"Data Source=BORGUS;Initial Catalog=RIT_Automation;Integrated Security=True";
         string getTransportUnitsSql = "dbo.GetAllTransportUnits";
         string saveTransportUnitCoordinatesSql = "dbo.SaveTransportCoordinates";
 
@@ -35,7 +35,10 @@ namespace RITAutomation.Services
                         string name = (string)reader.GetValue(1);
                         double longtitude = (double)reader.GetValue(2);
                         double latitude = (double)reader.GetValue(3);
-                        units.Add(new TransportUnit(id, name, latitude, longtitude));
+                        string sourceTypeString = (string)reader.GetValue(4);
+                        SourceTypeEnum sourceType = (SourceTypeEnum)Enum.Parse(typeof(SourceTypeEnum), sourceTypeString, true);
+                        string source = (string)reader.GetValue(5);
+                        units.Add(new TransportUnit(id, name, latitude, longtitude, sourceType, source));
                     }
                 }
                 else
@@ -47,7 +50,7 @@ namespace RITAutomation.Services
             return units;
         }
 
-        public void SaveTransportUnitCoordinates(string name, double latitude, double longtitude)
+        public void SaveTransportUnitCoordinates(int id, double latitude, double longtitude)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -56,7 +59,7 @@ namespace RITAutomation.Services
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@latitude", latitude);
                 command.Parameters.AddWithValue("@longtitude", longtitude);
                 command.ExecuteNonQuery();
