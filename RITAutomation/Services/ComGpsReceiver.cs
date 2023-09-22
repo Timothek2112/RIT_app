@@ -1,48 +1,41 @@
-﻿using GMap.NET;
-using RITAutomation.Models;
+﻿using RITAutomation.Models;
 using RITAutomation.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO.Ports;
 using System.Linq;
-using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace RITAutomation.Services
 {
-    public class UdpGPSReceiver : IReceiver
+    public class ComGpsReceiver : IReceiver
     {
-        readonly int _port;
-        public GPGGA lastData { get; set; }
         private bool _isReceiving = false;
         public bool isReceiving
-        {
-            get
-            {
-                return _isReceiving;
-            }
-        }
-        UdpClient client;
+        { get { return _isReceiving; } }
+        SerialPort serialPort;
 
-        public UdpGPSReceiver(int port)
+        public ComGpsReceiver(string port)
         {
-            _port = port;
-            client = new UdpClient(port);
+            serialPort = new SerialPort(port, 1200);
         }
+
+        public GPGGA lastData { get; set; }
 
         public GPGGA GetLastData()
         {
             return lastData;
         }
 
-        public async void ReceiveAsync()
+        public void ReceiveAsync()
         {
             while (isReceiving)
             {
-                var bytes = await client.ReceiveAsync();
-                var data = Encoding.UTF8.GetString(bytes.Buffer);
+                string data = serialPort.ReadLine();
+                if (data == String.Empty || !data.StartsWith("$GPGGA")) continue;
+                Debug.WriteLine("Строка: " + data);
                 GPGGA gpgga = NMEAParser.ParseGPGGA(data);
                 lastData = gpgga;
             }
@@ -51,6 +44,7 @@ namespace RITAutomation.Services
         public void StartReceiving()
         {
             _isReceiving = true;
+            serialPort.Open();
             Task receiving = new Task(ReceiveAsync);
             receiving.Start();
         }
@@ -58,6 +52,7 @@ namespace RITAutomation.Services
         public void StopReceiving()
         {
             _isReceiving = false;
+            serialPort.Close();
         }
     }
 }

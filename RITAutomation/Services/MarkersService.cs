@@ -23,9 +23,9 @@ namespace RITAutomation.Services
             transportCoordinatesService = new TransportCoordinatesService();
         }
 
-        public Marker CreateMarker(int id,int port, double latitude, double longtitude, string description)
+        public Marker CreateMarker(int id, SourceTypeEnum sourceType, string source, double latitude, double longtitude, string description)
         {
-            Marker marker = new Marker(id, port, new PointLatLng(latitude, longtitude), GMarkerGoogleType.blue_dot);
+            Marker marker = new Marker(id, sourceType, source, new PointLatLng(latitude, longtitude), GMarkerGoogleType.blue_dot);
             marker.ToolTipText = description;
             return marker;
         }
@@ -42,7 +42,9 @@ namespace RITAutomation.Services
             int port = 1;
             foreach (TransportUnit unit in units)
             {
-                markers.Add(CreateMarker(unit.id, port, unit.latitude, unit.longtitude, unit.name));
+                Marker marker = CreateMarker(unit.id, unit.sourceType, unit.source, unit.latitude, unit.longtitude, unit.name);
+                markers.Add(marker);
+                marker.StartReceiving();
                 port++;
             }
             return markers;
@@ -56,9 +58,9 @@ namespace RITAutomation.Services
             }
         }
 
-        public void SaveMarkerCoordinates(string name, double latitude, double longtitude)
+        public void SaveMarkerCoordinates(int id, double latitude, double longtitude)
         {
-            transportCoordinatesService.SaveTransportUnitCoordinates(name, latitude, longtitude);
+            transportCoordinatesService.SaveTransportUnitCoordinates(id, latitude, longtitude);
         }
     }
 }

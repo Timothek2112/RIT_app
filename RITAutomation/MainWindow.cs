@@ -64,12 +64,22 @@ namespace RITAutomation
             }
             catch(NoRowsException ex)
             {
-                new Thread(() => MessageBox.Show(ex.Message, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning)).Start();
+                new Thread(() => ShowWarning(ex.Message)).Start();
             }
             catch(Exception ex) 
             {
-                new Thread(() => MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error)).Start();
+                new Thread(() => ShowException(ex.Message)).Start();
             }
+        }
+
+        public void ShowWarning(string message)
+        {
+            MessageBox.Show(message, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public void ShowException(string message)
+        {
+            MessageBox.Show(message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void gMapControl1_OnMarkerEnter(GMapMarker item)
@@ -98,7 +108,7 @@ namespace RITAutomation
                 var lat = Map.FromLocalToLatLng(e.X, e.Y).Lat;
                 var lng = Map.FromLocalToLatLng(e.X, e.Y).Lng;
                 dragMarker.Position = new PointLatLng(lat, lng);
-                markersService.SaveMarkerCoordinates(dragMarker.ToolTipText, dragMarker.Position.Lat, dragMarker.Position.Lng);
+                markersService.SaveMarkerCoordinates(dragMarker.id, dragMarker.Position.Lat, dragMarker.Position.Lng);
                 dragMarker = null;
             }
             catch(Exception ex)
