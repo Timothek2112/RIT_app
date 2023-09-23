@@ -21,6 +21,7 @@ namespace RITAutomation.Models
     {
         public int id;
         public IReceiver receiver;
+        public MarkerModeEnum mode = MarkerModeEnum.manual;
 
         public Marker(int id, SourceTypeEnum sourceType, string source, PointLatLng p, GMarkerGoogleType type) : base(p, type)
         {
@@ -82,15 +83,26 @@ namespace RITAutomation.Models
         {
             while (receiver.isReceiving)
             {
+                if (mode != MarkerModeEnum.auto) continue;
                 if (receiver.lastData == null) continue;
                 if (receiver.lastData.isEmpty) throw new Exception("Не удалось получить данные о позиции маркера"); 
                 UpdateCoordinates(receiver.lastData.point.Lat, receiver.lastData.point.Lng);
             }
+            receiver.StopReceiving();
         }
 
         public void StopReceiving()
         {
             receiver.StopReceiving();
+        }
+
+        public void SetMode(MarkerModeEnum mode)
+        {
+            this.mode = mode;
+            if(mode == MarkerModeEnum.auto && !receiver.isReceiving)
+            {
+                StartReceiving();
+            }
         }
     }
 }

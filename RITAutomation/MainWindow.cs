@@ -24,13 +24,16 @@ namespace RITAutomation
         GMapOverlay markersOverlay;
         Marker dragMarker;
         Marker markerUnderMouse;
+        Marker selectedMarker;
         MarkersService markersService;
+        bool selectedMarkerSettingsChanged = false;
 
         public MainWindow()
         {
             InitializeComponent();
             markersService = new MarkersService();
             InitializeMap();
+            LoadMarkerModes();
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
@@ -53,6 +56,13 @@ namespace RITAutomation
             Map.ShowTileGridLines = false;
             markersOverlay = new GMapOverlay("Markers");
             Map.Overlays.Add(markersOverlay);
+        }
+
+        private void LoadMarkerModes()
+        {
+            sourceCbx.DataSource = MarkerMode.modes;
+            sourceCbx.DisplayMember = "name";
+            sourceCbx.ValueMember = "mode";
         }
 
         private void LoadAllMarkers()
@@ -97,6 +107,17 @@ namespace RITAutomation
             if (markerUnderMouse == null)
                 return;
             dragMarker = markerUnderMouse;
+            ChangeSelectedMarkerInfo(markerUnderMouse);
+        }
+
+        public void ChangeSelectedMarkerInfo(Marker newSelection)
+        {
+            fieldGb.Visible = false;
+            markerGb.Visible = true;
+            selectedMarker = newSelection;
+            nameTb.Text = selectedMarker.ToolTipText;
+            idTb.Text = selectedMarker.id.ToString();
+            sourceCbx.SelectedValue= selectedMarker.mode;
         }
 
         private void gMapControl1_MouseUp(object sender, MouseEventArgs e)
@@ -109,11 +130,14 @@ namespace RITAutomation
                 var lng = Map.FromLocalToLatLng(e.X, e.Y).Lng;
                 dragMarker.Position = new PointLatLng(lat, lng);
                 markersService.SaveMarkerCoordinates(dragMarker.id, dragMarker.Position.Lat, dragMarker.Position.Lng);
-                dragMarker = null;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new Thread(() => MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error)).Start();
+            }
+            finally
+            {
+                dragMarker = null;
             }
         }
 
@@ -124,6 +148,54 @@ namespace RITAutomation
             var lat = Map.FromLocalToLatLng(e.X, e.Y).Lat;
             var lng = Map.FromLocalToLatLng(e.X, e.Y).Lng;
             dragMarker.UpdateCoordinates(lat, lng);
+        }
+
+        private void sourceCbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(selectedMarker == null ) return;
+            selectedMarkerSettingsChanged = true;
+            UpdateMarkerSettingsState();
+            selectedMarker.SetMode((MarkerModeEnum)sourceCbx.SelectedValue);
+        }
+
+        private void sourceLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sourceTypeCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedMarkerSettingsChanged = true;
+            UpdateMarkerSettingsState();
+        }
+
+        private void sourceTb_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sourceTb_TextChanged(object sender, EventArgs e)
+        {
+            selectedMarkerSettingsChanged = true;
+            UpdateMarkerSettingsState();
+        }
+
+        private void UpdateMarkerSettingsState()
+        {
+            if (selectedMarkerSettingsChanged)
+            {
+                acceptBtn.Enabled = true;
+            }
+            else
+            {
+                acceptBtn.Enabled = false;
+            }
+        }
+
+        private void acceptBtn_Click(object sender, EventArgs e)
+        {
+            selectedMarkerSettingsChanged = false;
+            UpdateMarkerSettingsState();
         }
     }
 }

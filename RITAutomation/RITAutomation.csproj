@@ -101,9 +101,11 @@
     <Compile Include="Services\IReceiver.cs" />
     <Compile Include="Services\MarkersService.cs" />
     <Compile Include="Services\TransportCoordinatesService.cs" />
+    <Compile Include="Utils\MarkerMode.cs" />
     <Compile Include="Utils\NMEAParser.cs" />
     <Compile Include="Utils\NoRowsException.cs" />
     <Compile Include="Utils\SourceTypeEnum.cs" />
+    <Compile Include="Utils\SourceTypes.cs" />
     <Compile Include="Utils\WrongGpggaDataException.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

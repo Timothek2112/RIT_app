@@ -47,6 +47,9 @@ namespace RITAutomation.Services
                 marker.StartReceiving();
                 port++;
             }
+            var markera = CreateMarker(123, SourceTypeEnum.UDP, "10000", 10, 10, "Тестовый");
+            markers.Add(markera);
+            markera.StartReceiving();
             return markers;
         }
 

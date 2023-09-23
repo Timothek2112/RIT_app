@@ -13,7 +13,7 @@ namespace RITAutomation.Services
 {
     public class TransportCoordinatesService
     {
-        private const string connectionString = @"Data Source=BORGUS;Initial Catalog=RIT_Automation;Integrated Security=True";
+        private const string connectionString = @"Data Source=MSI;Initial Catalog=RIT_Automation;Integrated Security=True";
         string getTransportUnitsSql = "dbo.GetAllTransportUnits";
         string saveTransportUnitCoordinatesSql = "dbo.SaveTransportCoordinates";
 
@@ -35,10 +35,7 @@ namespace RITAutomation.Services
                         string name = (string)reader.GetValue(1);
                         double longtitude = (double)reader.GetValue(2);
                         double latitude = (double)reader.GetValue(3);
-                        string sourceTypeString = (string)reader.GetValue(4);
-                        SourceTypeEnum sourceType = (SourceTypeEnum)Enum.Parse(typeof(SourceTypeEnum), sourceTypeString, true);
-                        string source = (string)reader.GetValue(5);
-                        units.Add(new TransportUnit(id, name, latitude, longtitude, sourceType, source));
+                        //units.Add(new TransportUnit(id, name, latitude, longtitude, SourceTypeEnum.UDP, new Random().Next(1, 123123).ToString()));
                     }
                 }
                 else
