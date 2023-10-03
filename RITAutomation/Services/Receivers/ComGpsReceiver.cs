@@ -16,13 +16,12 @@ namespace RITAutomation.Services
         public bool isReceiving
         { get { return _isReceiving; } }
         SerialPort serialPort;
+        public GPGGA lastData { get; set; }
 
         public ComGpsReceiver(string port)
         {
             serialPort = new SerialPort(port, 1200);
         }
-
-        public GPGGA lastData { get; set; }
 
         public GPGGA GetLastData()
         {
@@ -35,7 +34,6 @@ namespace RITAutomation.Services
             {
                 string data = serialPort.ReadLine();
                 if (data == String.Empty || !data.StartsWith("$GPGGA")) continue;
-                Debug.WriteLine("Строка: " + data);
                 GPGGA gpgga = NMEAParser.ParseGPGGA(data);
                 lastData = gpgga;
             }
@@ -43,6 +41,7 @@ namespace RITAutomation.Services
 
         public void StartReceiving()
         {
+            if (_isReceiving) return;
             _isReceiving = true;
             serialPort.Open();
             Task receiving = new Task(ReceiveAsync);
@@ -51,6 +50,7 @@ namespace RITAutomation.Services
 
         public void StopReceiving()
         {
+            if (!_isReceiving) return;
             _isReceiving = false;
             serialPort.Close();
         }

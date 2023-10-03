@@ -34,17 +34,18 @@ namespace RITAutomation.Services
             {
                 while (isReceiving)
                 {
-                    Thread.Sleep(readDelay);
                     string data = file.ReadLine();
                     if (data == null || !data.StartsWith("$GPGGA")) continue;
                     GPGGA gpgga = NMEAParser.ParseGPGGA(data);
                     lastData = gpgga;
+                    Thread.Sleep(readDelay);
                 }
             }
         }
 
         public void StartReceiving()
         {
+            if(_isReceiving) return;
             _isReceiving = true;
             Task receiving = new Task(ReceiveAsync);
             receiving.Start();
@@ -52,6 +53,7 @@ namespace RITAutomation.Services
 
         public void StopReceiving()
         {
+            if (!_isReceiving) return;
             _isReceiving = false;
         }
     }

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace RITAutomation.Utils
 {
-    public enum SourceTypeEnum
+    public enum PolygonCommandEnum
     {
-        FILE,
-        UDP,
-        COM,
+        None,
+        ChangeColor,
+        SendMessage,
+        RandomPositionOnScreen
     }
 }

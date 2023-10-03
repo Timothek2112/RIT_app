@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RITAutomation.Utils;
 
 namespace RITAutomation.Services
 {
@@ -11,9 +12,9 @@ namespace RITAutomation.Services
     {
         bool isReceiving { get; }
         GPGGA lastData { get; set; }
+        GPGGA GetLastData();
         void StartReceiving();
         void StopReceiving();
-        GPGGA GetLastData();
         void ReceiveAsync();
     }
 }

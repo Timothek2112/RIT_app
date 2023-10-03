@@ -13,8 +13,8 @@ namespace RITAutomation.Models
         public string name;
         public double latitude;
         public double longtitude;
-        public SourceTypeEnum sourceType;
-        public string source;
+        public SourceTypeEnum sourceType = SourceTypeEnum.UDP;
+        public string source = "";
 
         public TransportUnit(int id, string name, double latitude, double longtitude, SourceTypeEnum sourceType, string source)
         { 

@@ -29,7 +29,6 @@ namespace RITAutomation.Services
         public UdpGPSReceiver(int port)
         {
             _port = port;
-            client = new UdpClient(port);
         }
 
         public GPGGA GetLastData()
@@ -41,22 +40,30 @@ namespace RITAutomation.Services
         {
             while (isReceiving)
             {
-                var bytes = await client.ReceiveAsync();
-                var data = Encoding.UTF8.GetString(bytes.Buffer);
-                GPGGA gpgga = NMEAParser.ParseGPGGA(data);
-                lastData = gpgga;
+                try
+                {
+                    var bytes = await client.ReceiveAsync();
+                    var data = Encoding.UTF8.GetString(bytes.Buffer);
+                    GPGGA gpgga = NMEAParser.ParseGPGGA(data);
+                    lastData = gpgga;
+                }
+                catch { }
             }
         }
 
         public void StartReceiving()
         {
+            if (_isReceiving) return;
+            client = new UdpClient(_port);
             _isReceiving = true;
-            Task receiving = new Task(ReceiveAsync);
-            receiving.Start();
+            Task.Run(() => ReceiveAsync());
         }
 
         public void StopReceiving()
         {
+            if(client != null) 
+                client.Close();
+            if(!_isReceiving) return;
             _isReceiving = false;
         }
     }

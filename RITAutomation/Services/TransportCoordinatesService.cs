@@ -35,7 +35,7 @@ namespace RITAutomation.Services
                         string name = (string)reader.GetValue(1);
                         double longtitude = (double)reader.GetValue(2);
                         double latitude = (double)reader.GetValue(3);
-                        //units.Add(new TransportUnit(id, name, latitude, longtitude, SourceTypeEnum.UDP, new Random().Next(1, 123123).ToString()));
+                        units.Add(new TransportUnit(id, name, latitude, longtitude, SourceTypeEnum.UDP, ""));
                     }
                 }
                 else

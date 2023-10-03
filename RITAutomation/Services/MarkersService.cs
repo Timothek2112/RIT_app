@@ -39,17 +39,11 @@ namespace RITAutomation.Services
         {
             List<Marker> markers = new List<Marker>();
             List<TransportUnit> units = transportCoordinatesService.GetTransportUnits();
-            int port = 1;
             foreach (TransportUnit unit in units)
             {
                 Marker marker = CreateMarker(unit.id, unit.sourceType, unit.source, unit.latitude, unit.longtitude, unit.name);
                 markers.Add(marker);
-                marker.StartReceiving();
-                port++;
             }
-            var markera = CreateMarker(123, SourceTypeEnum.UDP, "10000", 10, 10, "Тестовый");
-            markers.Add(markera);
-            markera.StartReceiving();
             return markers;
         }
 

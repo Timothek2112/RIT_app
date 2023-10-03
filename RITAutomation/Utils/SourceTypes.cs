@@ -8,23 +8,23 @@ namespace RITAutomation.Utils
 {
         public class SourceTypeNamePair
         {
-            public SourceTypeEnum mode { get; set; }
+            public SourceTypeEnum type { get; set; }
             public string name { get; set; }
 
             public SourceTypeNamePair(SourceTypeEnum type, string name)
             {
-                this.mode = type;
+                this.type = type;
                 this.name = name;
             }
         }
 
         public static class SourceTypes
         {
-            public static List<SourceTypeNamePair> modes = new List<SourceTypeNamePair>()
+            public static List<SourceTypeNamePair> types = new List<SourceTypeNamePair>()
             {
                 new SourceTypeNamePair(SourceTypeEnum.UDP, "UDP"),
                 new SourceTypeNamePair(SourceTypeEnum.COM, "COM порт"),
-                new SourceTypeNamePair(SourceTypeEnum.FILE, "File"),
+                new SourceTypeNamePair(SourceTypeEnum.FILE, "Файл"),
 
             };
         }
